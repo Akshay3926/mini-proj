@@ -1,0 +1,5 @@
+package com.Akshay.service;
+
+public interface ContactService {
+
+}

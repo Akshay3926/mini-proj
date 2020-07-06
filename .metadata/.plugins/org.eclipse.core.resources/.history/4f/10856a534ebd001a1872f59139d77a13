@@ -1,0 +1,30 @@
+package com.Akshay.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.Akshay.dto.Contact;
+import com.Akshay.entity.ContactEntity;
+import com.Akshay.service.ContactService;
+
+@Controller
+public class ContactController {
+
+	@Autowired
+	private ContactService contactService;
+
+	@GetMapping(value= {"/","/addContact"})
+	public String loadForm(Model model) {
+		Contact c =new Contact();
+		model.addAttribute("contact",c);
+		return "contactInfo";   
+	}
+
+	@PostMapping(value="/saveContact")
+	public String handleSubmitBtn(ContactEntity c,Model model) {
+		return null;
+	}
+}

@@ -1,0 +1,11 @@
+package com.Akshay.repo;
+
+import java.io.Serializable;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.Akshay.entity.ContactEntity;
+
+public interface ContactRepo extends JpaRepository<ContactEntity,Serializable>{
+
+}
